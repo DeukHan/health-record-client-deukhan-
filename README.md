@@ -22,12 +22,22 @@ npm i react-router-dom @types/react-router-dom
 ## Attendance check 기능 구현
 
 # React 프로젝트에 FullCalendar모듈 설치
+```sh
+
 npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid
 
+```
+
 #Home.js에 fullcalendar import 및 사용
+```sh
+
 import FullCalendar from '@fullcalendar/react'
+
 import dayGridPlugin from '@fullcalendar/daygrid'
+
 <FullCalendar 
   defaultView="dayGridMonth" 
   plugins={[ dayGridPlugin ]}
 />
+
+```
