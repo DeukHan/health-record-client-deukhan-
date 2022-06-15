@@ -23,7 +23,7 @@ npm i react-router-dom @types/react-router-dom
 
 ```sh
 # React 프로젝트에 FullCalendar모듈 설치
-npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid
+npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction
 
 ```
 
