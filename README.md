@@ -36,5 +36,8 @@ import dayGridPlugin from '@fullcalendar/daygrid'
   defaultView="dayGridMonth" 
   plugins={[ dayGridPlugin ]}
 />
+TypeScipt에서는 FullCalendar의 defaultView기능을 사용할 수 없어 JavaScipt로 변경하게 됨.
+<img width="746" alt="image" src="https://user-images.githubusercontent.com/104338516/173835478-6694d745-d4b1-4bdb-ae38-49605c4d81ff.png">
+
 
 ```
