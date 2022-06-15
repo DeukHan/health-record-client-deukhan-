@@ -21,10 +21,12 @@ npm i react-router-dom @types/react-router-dom
 
 ## Attendance check 기능 구현
 
+예제 사이트
+https://codesandbox.io/examples/package/@fullcalendar/react
+
 ```sh
 # React 프로젝트에 FullCalendar모듈 설치
-npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction
-
+npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction @fullcalendar/timegrid
 ```
 
 ```sh
