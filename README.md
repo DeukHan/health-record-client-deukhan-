@@ -46,3 +46,9 @@ TypeScipt에서는 FullCalendar의 defaultView기능을 사용할 수 없어 Jav
 
 기본 달력이 적용된 화면
 <img width="1438" alt="image" src="https://user-images.githubusercontent.com/104338516/173836625-bb5e8df4-ce87-4b57-950b-e3cd2b51180e.png">
+
+드래그&드랍 기능이 적용된 화면
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/104338516/174089667-d7861042-e1e2-4177-800f-4b9914fd8fa9.png">
+
+
+npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction @fullcalendar/timegrid
