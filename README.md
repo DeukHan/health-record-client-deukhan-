@@ -19,3 +19,36 @@ npm i react-router-dom @types/react-router-dom
 
 ```
 
+## Attendance check 기능 구현
+
+예제 사이트
+
+https://codesandbox.io/examples/package/@fullcalendar/react
+
+```sh
+# React 프로젝트에 FullCalendar모듈 설치
+npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction @fullcalendar/timegrid
+
+npm install mobx-react
+```
+
+```sh
+#Home.js에 fullcalendar import 및 사용
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+<FullCalendar 
+  defaultView="dayGridMonth" 
+  plugins={[ dayGridPlugin ]}
+/>
+
+```
+
+기본 달력이 적용된 화면
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/104338516/173836625-bb5e8df4-ce87-4b57-950b-e3cd2b51180e.png">
+
+드래그&드랍 기능이 적용된 화면
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/104338516/174089667-d7861042-e1e2-4177-800f-4b9914fd8fa9.png">
+
+
+npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction @fullcalendar/timegrid
