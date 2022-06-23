@@ -29,7 +29,7 @@ https://codesandbox.io/examples/package/@fullcalendar/react
 # React 프로젝트에 FullCalendar모듈 설치
 npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction @fullcalendar/timegrid
 
-npm install react-meta-tags --save
+npm install --save mobx
 ```
 
 ```sh
