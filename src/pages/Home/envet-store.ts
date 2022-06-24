@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { observable, action, makeAutoObservable } from "mobx";
 import { EventInput, DateSelectArg, EventChangeArg } from "@fullcalendar/react";
+import Moment from 'moment';
 
 export class EventStore {
 
@@ -21,7 +22,7 @@ export class EventStore {
 
   private eventGuid = 0;  //추가된 이벤트를 관리하기 위한 ID
                           //추후에는 DB에 저장된 마지막 ID+1을 기본값으로 설정해야 한다.
-
+  private attendanceCheckEventColor = '#378006';//"#388e3c";
   //@observable
   events: EventInput[] = [
     // {
@@ -46,17 +47,51 @@ export class EventStore {
     return String(this.eventGuid++);
   }
 
+  private currentEventDate() {
+    const formatDate = Moment().format('YYYY-MM-DD');
+    return formatDate;
+  }
+
+  private getEventColor(title: string) {
+    let color = "";
+
+    if(title === "출석"){
+      color = "#388e3c";
+    }
+    else{
+      color = "#0097a7";
+    }
+
+
+    return color;
+  }
+
   //@action
-  addEvent(selectInfo: DateSelectArg, title: string | null) {
+  addEvent(selectInfo: DateSelectArg, title: string) {
     this.events.push({
-      id: this.createEventId(),
-      title: title || "New Event",
+      id: (title === "출석" ? this.createEventId() : this.createEventId()),
+      title: title,
       start: selectInfo.start,
       end: selectInfo.end,
       allDay: selectInfo.allDay,
+      color: this.getEventColor(title),
     });
+  }
 
-    console.log(this.events);
+  //@action
+  addAttendancecheckEvent(title: string) {
+    this.events.findIndex((e) => (e.title === title))
+    //같은 날짜에 여러번 출석체크를 클릭했을 경우 중복으로 출석 기능 동작하지 않도록 함.
+    if(this.events.findIndex((e) => (e.start === this.currentEventDate() && e.title === title)) !== 0)
+    {
+      this.events.push({
+        id: this.createEventId(),
+        title: title,
+        start: this.currentEventDate(),
+        allDay: true,
+        color: this.getEventColor(title),
+      });
+    }
   }
 
   //@action
