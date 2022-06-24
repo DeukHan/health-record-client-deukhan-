@@ -30,6 +30,7 @@ https://codesandbox.io/examples/package/@fullcalendar/react
 npm install --save @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction @fullcalendar/timegrid
 
 npm install mobx-react
+npm install moment
 ```
 
 ```sh
